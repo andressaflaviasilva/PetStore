@@ -28,7 +28,6 @@ public class Pet {
         .then()
                 .log().all()
                 .statusCode(200);
-
     }
 
 }
