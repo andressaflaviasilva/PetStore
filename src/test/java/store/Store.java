@@ -1,4 +1,4 @@
-package Store;
+package petstore;
 
 import groovy.transform.ASTTest;
 import java.io.IOException;
@@ -16,7 +16,6 @@ public class Store {
         return new String(Files.readAllBytes(Paths
                 .get(caminhoJson)));
 }
-
     //incluir pedido
     @Test
     public void incluirPedido()throws IOException{
@@ -30,6 +29,10 @@ public class Store {
         .then()
                 .log().all()
                 .statusCode(200)
+                .body("id", is(20230727))
+                .body("quantity", is(2))
+                .body("status", is("requested"))
+                .body("complete", is(true))
 ;
 
     }

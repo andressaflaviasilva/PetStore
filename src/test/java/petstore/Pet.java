@@ -72,5 +72,18 @@ public class Pet {
                 .body("tags.name", contains("Banho"));
 
     }
+    @Test(priority=4)
+    public void consultarPetStatus(){
+        String petId = "1982120640";
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .get(uri + "/" + "findByStatus?status=sold")
+        .then()
+                .log().all()
+                .statusCode(200)
+        ;
+    }
 }
 
