@@ -7,4 +7,4 @@ No módulo pet, foi feito a implementação dos seguintes fluxos: Cadastrar, edi
 
 No módulo store, foi feito a implementação do fluxo cadastro de um pedido.
 
-Em breve mais novas implementações.
+Em breve novas implementações.
